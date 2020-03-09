@@ -1,0 +1,39 @@
+# HW grading scale: check(++) --> excellent (good code and analysis AND also completed bonus problem)  
+#                   check(+) --> excellent (good code and analysis)  
+#                   check    --> satisfactory (minor shortcomings in code and/or analysis)
+#                   check(-) --> significant problems w/code or analysis
+
+1) Problem 1 (area.cpp embellishments): 
+
+Your code looks ok to me.  
+
+2)Problem 2 (sum up/down): 
+
+Your sum_up and sum_down functions have some dangerous 
+features (e.g., using a float to count iterations in the loop increment), and the while the data kind of looks
+OK, you really need to go to higher N values (say 1E+9). Also, you'll want to do a logarithmic interval (yours
+isn't too bad even though it's linear since you're incrementing N by 10000 each time, but still a log interval
+is nicer IMHO, especially for log-log plots).
+
+The analysis is a little thin. For example, what method (and why) do you expect is the more precise one? 
+Hint: this problem is just a bit more complicated version of the 1+eps+eps... vs eps + eps +...+1 
+problem we did in class. 
+
+3) Problem 3 (bessel functions): 
+
+The results/analysis look ok.  Note that the relative error plot
+doesn't tell you WHICH result (upward or downward recursion) is more reliable. How could
+you determine which one is best in each region of x? (Hint: GSL)  
+
+(Sidenote: If interested, you can understand numerical value of the slope between x=1 and 10
+using the short-distance x << l expressions of the spherical bessel and neumann functions. See Ch. 4 
+notes. I wonder if one can play similar games for the VERY steep 
+region above x = 30 using the asymptotic x >> l expressions for jl(x) and nl(x).)
+
+
+4) Extra problem (roundoff distribution):
+NA
+
+##### HW grade = check 
+
+Upgrade your grade: Fix the sumup/sumdown code to get a check(+). Additionally do the bonus for a check(++). 

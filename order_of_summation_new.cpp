@@ -48,14 +48,14 @@ float SumDown(float N) {
 int
 main ()
 {
-  float N = 10000000;	// Highest value summed up to or summed down from
+  float N = 1e+9;	// Highest value summed up to or summed down from
   ofstream my_out ("order_of_summation_new.dat");
 
   my_out << "#   N        SumUp       SumDown        Abs. Diff     " << endl;
     
     
   // For loop to sum up to 1/N and sum down to 1
-  for (float i = 1; i < N; i+=100000)
+  for (float i = 100; i < N; i=i*2)
     {
       float sum_first_sp =SumUp(i);
       float sum_last_sp =SumDown(i);
